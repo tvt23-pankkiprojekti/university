@@ -22,6 +22,9 @@ const student={
     },
     deleteStudent(un, callback){
         return db.query("DELETE FROM student WHERE username=?",[un],callback);
+    },
+    login(un, callback){
+        return db.query("SELECT password FROM student WHERE username=?",[un], callback);
     }
 }
 
