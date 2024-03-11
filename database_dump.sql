@@ -29,7 +29,7 @@ CREATE TABLE `course` (
   `course_name` varchar(45) DEFAULT NULL,
   `gredit_points` smallint DEFAULT NULL,
   PRIMARY KEY (`idcourse`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `course` (
 
 LOCK TABLES `course` WRITE;
 /*!40000 ALTER TABLE `course` DISABLE KEYS */;
+INSERT INTO `course` VALUES (1,'Java',4),(2,'C++',5),(4,'C++',5);
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,6 +96,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('user01','Jussi','Virtanen','Isokatu 4','jussi@oamk.fi','$2a$10$cxsdG3brcFrMRCrgkyUzcO1c2RXwCTJxMN4hHUmfLR30KHHWGE1ly'),('user02','Aino','Joki','Uusikatu4','t@oamk.fi','$2a$10$5sCK5/nBSFCWTUiEqiz2aOLnBYFGPtI4NZGQnlWSP00o50b1Q3L2C');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-11 12:30:40
+-- Dump completed on 2024-03-11 14:51:38
