@@ -13,4 +13,4 @@ Hahmottelin tietokannan ER-kaaviota seuraavasti:
 <img src="er_plan.png">
 
 Lopullinen diagrammi on seuraava:
-<img src="er_final-png">
+<img src="er_final.png">
