@@ -1,0 +1,2 @@
+CREATE USER 'uniuser'@'localhost' IDENTIFIED BY 'unipass';
+GRANT ALL ON university.* TO 'uniuser'@'localhost';
