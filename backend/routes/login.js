@@ -10,8 +10,8 @@ router.post('/',function(request, response){
     if(request.body.username && request.body.password){
         student.login(request.body.username, function(err,result){
             if(err){
-                console.log(err);
-                response.send(err);
+                console.log(err.errno);
+                response.json(err.errno);
             }
             else{
                 if(result.length >0){
