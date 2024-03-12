@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     environment.cpp \
+    grades.cpp \
     main.cpp \
     mainwindow.cpp \
     studentinfo.cpp \
@@ -18,11 +19,13 @@ SOURCES += \
 
 HEADERS += \
     environment.h \
+    grades.h \
     mainwindow.h \
     studentinfo.h \
     studentmenu.h
 
 FORMS += \
+    grades.ui \
     mainwindow.ui \
     studentinfo.ui \
     studentmenu.ui

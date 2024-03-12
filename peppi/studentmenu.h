@@ -26,6 +26,8 @@ private slots:
     void on_btnInfo_clicked();
     void infoSlot(QNetworkReply *reply);
 
+    void on_btnGrades_clicked();
+
 private:
     Ui::StudentMenu *ui;
     QString username;
