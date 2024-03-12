@@ -1,4 +1,5 @@
 #include "environment.h"
+#include "grades.h"
 #include "studentinfo.h"
 #include "studentmenu.h"
 #include "ui_studentmenu.h"
@@ -55,5 +56,14 @@ void StudentMenu::infoSlot(QNetworkReply *reply)
     objecStudentInfo->show();
     reply->deleteLater();
     infoManager->deleteLater();
+}
+
+
+void StudentMenu::on_btnGrades_clicked()
+{
+    Grades *objectGrades=new Grades(this);
+    objectGrades->setUsername(username);
+    objectGrades->setWebtoken(webToken);
+    objectGrades->show();
 }
 

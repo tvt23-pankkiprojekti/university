@@ -60,7 +60,7 @@ CREATE TABLE `grade` (
   KEY `course-grade_idx` (`idcourse`),
   CONSTRAINT `course-grade` FOREIGN KEY (`idcourse`) REFERENCES `course` (`idcourse`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `student-grade` FOREIGN KEY (`username`) REFERENCES `student` (`username`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,6 +69,7 @@ CREATE TABLE `grade` (
 
 LOCK TABLES `grade` WRITE;
 /*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+INSERT INTO `grade` VALUES (1,'user01',5,'2024-01-15',1),(2,'user01',4,'2024-02-15',2),(3,'user01',3,'2024-03-10',4),(4,'user02',3,'2023-01-15',1),(5,'user02',4,'2023-02-15',2),(6,'user02',5,'2023-03-10',4);
 /*!40000 ALTER TABLE `grade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-11 14:51:38
+-- Dump completed on 2024-03-12 14:56:32
