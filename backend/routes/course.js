@@ -1,7 +1,6 @@
 const express=require('express');
 const router=express.Router();
 const course=require('../models/course_model');
-const { request } = require('http');
 
 router.get('/',function(request, response){
  course.getAllCourses(function(err, result){
