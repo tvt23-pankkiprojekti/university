@@ -47,9 +47,14 @@ void Grades::gradeSlot(QNetworkReply *reply)
     QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
     QJsonArray json_array = json_doc.array();
     QString grades;
+    grades="Kurssi | opintopisteet | arvosana | suoritus pvm \r";
     foreach (const QJsonValue &value, json_array) {
         QJsonObject json_obj = value.toObject();
-        grades+=json_obj["course_name"].toString()+" "+ QString::number(json_obj["gredit_points"].toInt())+"\r";
+        grades+=json_obj["course_name"].toString()+" | ";
+        grades+=QString::number(json_obj["gredit_points"].toInt())+" | ";
+        grades+=QString::number(json_obj["grade"].toInt())+" | ";
+        grades+=json_obj["grade_date"].toString();
+        grades+="\r";
     }
     ui->textGrades->setText(grades);
 
