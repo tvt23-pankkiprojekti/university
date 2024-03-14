@@ -40,9 +40,9 @@ void MainWindow::loginSlot(QNetworkReply *reply)
     response_data=reply->readAll();
     QMessageBox msgBox;
     //qDebug()<<response_data;
-    if(response_data=="-4078"){
+    if(response_data=="-4078" || response_data.length()==0){
 
-        msgBox.setText("Virhe tietokantayhteydessä");
+        msgBox.setText("Virhe tietoliikenne yhteydessä");
         msgBox.exec();
     }
     else{
