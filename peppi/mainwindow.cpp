@@ -42,7 +42,7 @@ void MainWindow::loginSlot(QNetworkReply *reply)
     //qDebug()<<response_data;
     if(response_data=="-4078" || response_data.length()==0){
 
-        msgBox.setText("Virhe tietoliikenne yhteydessä");
+        msgBox.setText("Virhe tietoyhteydessä");
         msgBox.exec();
     }
     else{
