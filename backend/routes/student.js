@@ -32,8 +32,8 @@ router.post('/',function(request, response){
             response.send(err);
         }
         else{
-            response.json(result);
-            //response.send(result[0].affectedRows)
+            //response.json(result);
+            response.json(result.affectedRows);
         }
     });
 });
