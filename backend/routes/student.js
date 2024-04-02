@@ -33,7 +33,7 @@ router.post('/',function(request, response){
         }
         else{
             //response.json(result);
-            response.json(result);
+            response.json(result.affectedRows);
         }
     });
 });
